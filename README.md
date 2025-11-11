@@ -207,7 +207,7 @@ This is a commercial platform. All rights reserved.
 ## 🔗 Links
 
 - 🌐 **Info Page**: [freemarket.bz](https://freemarket.bz)
-- 📢 **Telegram**: [@freemarketbz](https://t.me/freemarketbz)
+- 📢 **Telegram**: [@freemarketbz](https://t.me/FreeMarketOffical)
 - 🧅 **Tor Access**: See website for .onion address
 
 ---
@@ -219,6 +219,7 @@ This is a commercial platform. All rights reserved.
 *Built with privacy in mind*
 
 </div>
+
 
 
 
