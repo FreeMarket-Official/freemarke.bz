@@ -63,7 +63,7 @@ We source servers from multiple geographic locations:
 
 ### Why Sell on FreeMarket?
 
-- **Low Commission**: Only 5% platform fee
+- **Low Commission**: Only 20% platform fee
 - **Instant Payouts**: Automatic crypto withdrawals
 - **Bulk Upload**: Mass import from TXT files
 - **Auto Validation**: System checks all servers
@@ -219,4 +219,5 @@ This is a commercial platform. All rights reserved.
 *Built with privacy in mind*
 
 </div>
+
 
