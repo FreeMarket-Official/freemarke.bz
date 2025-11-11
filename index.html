@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FreeMarket - Anonymous marketplace for RDP, VNC, SSH servers. Suppliers wanted!">
+    <meta name="keywords" content="rdp, vnc, ssh, tor, marketplace, cryptocurrency, anonymous">
+    <title>FreeMarket - Anonymous Server Marketplace | Suppliers Wanted</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #000000 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.75rem;
+            font-weight: 900;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        
+        .logo-text {
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .status {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+        }
+        
+        /* Supplier CTA */
+        .supplier-cta {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(249, 115, 22, 0.1));
+            border: 2px solid rgba(251, 191, 36, 0.3);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .supplier-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.1) 0%, transparent 70%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+        
+        .supplier-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .supplier-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .supplier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .supplier-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .supplier-item h3 {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        
+        .supplier-item ul {
+            list-style: none;
+            color: #cbd5e1;
+            font-size: 0.875rem;
+            text-align: left;
+        }
+        
+        .supplier-item ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .supplier-item ul li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            color: #000;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #fbbf24;
+            border-color: #fbbf24;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(251, 191, 36, 0.1);
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        /* Features */
+        .features {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 3rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(251, 191, 36, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-description {
+            color: #94a3b8;
+        }
+        
+        /* Stats */
+        .stats {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            border-top: 1px solid rgba(51, 65, 85, 0.5);
+            padding: 3rem 0;
+            margin-top: 5rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-link {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: #fbbf24;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .supplier-title {
+                font-size: 2rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🛒</div>
+                    <span class="logo-text">FreeMarket</span>
+                </div>
+                <div class="status">✅ Online & Secure</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>
+                Anonymous Marketplace for<br>
+                <span class="gradient-text">RDP • VNC • SSH</span>
+            </h1>
+            <p class="hero-subtitle">
+                Fully automated, privacy-focused platform on Tor Hidden Service
+            </p>
+            
+            <div class="btn-group">
+                <a href="https://freemarket.bz" class="btn btn-primary">
+                    🧅 Access Instructions
+                </a>
+                <a href="https://t.me/freemarketbz" class="btn btn-secondary" target="_blank">
+                    📢 Telegram Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supplier CTA -->
+    <section class="container">
+        <div class="supplier-cta">
+            <div class="supplier-cta-content">
+                <h2 class="supplier-title">🔥 SUPPLIERS WANTED</h2>
+                <p style="font-size: 1.25rem; color: #cbd5e1; margin-bottom: 2rem;">
+                    We're actively seeking reliable suppliers of remote server access
+                </p>
+                
+                <div class="supplier-grid">
+                    <!-- RDP -->
+                    <div class="supplier-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🖥️</div>
+                        <h3>RDP Servers</h3>
+                        <ul>
+                            <li>✅ Windows 10/11 Pro/Enterprise</li>
+                            <li>✅ Windows Server 2016/2019/2022</li>
+                            <li>✅ Administrator access required</li>
+                            <li>✅ Clean IP preferred</li>
+                            <li>✅ USA, Canada, Europe preferred</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- VNC -->
+                    <div class="supplier-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔌</div>
+                        <h3>VNC Servers</h3>
+                        <ul>
+                            <li>✅ Real Display (not virtual)</li>
+                            <li>✅ Ultra/Tight/Real VNC supported</li>
+                            <li>✅ Various resolutions</li>
+                            <li>✅ Stable connection required</li>
+                            <li>✅ Global locations accepted</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SSH -->
+                    <div class="supplier-item">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⌨️</div>
+                        <h3>SSH Servers</h3>
+                        <ul>
+                            <li>✅ Linux/Unix distributions</li>
+                            <li>✅ Root or sudo access required</li>
+                            <li>✅ Dedicated or shared hosting</li>
+                            <li>✅ Uptime > 95%</li>
+                            <li>✅ Any location accepted</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2.5rem;">
+                    <h3 style="color: #fbbf24; font-size: 1.5rem; margin-bottom: 1rem;">💰 Supplier Benefits</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 900; color: #fbbf24;">5%</div>
+                            <div style="font-size: 0.875rem; color: #94a3b8;">Platform Fee</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 900; color: #fbbf24;">Instant</div>
+                            <div style="font-size: 0.875rem; color: #94a3b8;">Payouts</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 900; color: #fbbf24;">Auto</div>
+                            <div style="font-size: 0.875rem; color: #94a3b8;">Validation</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 2rem; font-weight: 900; color: #fbbf24;">100%</div>
+                            <div style="font-size: 0.875rem; color: #94a3b8;">Anonymous</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-group" style="margin-top: 2.5rem;">
+                    <a href="https://freemarket.bz" class="btn btn-primary">
+                        🚀 Become a Supplier
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why <span class="gradient-text">FreeMarket</span>?</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3 class="feature-title">Maximum Anonymity</h3>
+                    <p class="feature-description">
+                        Tor Hidden Service only. No IP logs, no tracking, no personal data collection. Complete privacy for buyers and sellers.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Instant Delivery</h3>
+                    <p class="feature-description">
+                        Automated validation system with 100 parallel workers. Server credentials delivered within 5-30 seconds after payment.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Escrow Protection</h3>
+                    <p class="feature-description">
+                        48-hour warranty period. Automatic refund or replacement if server doesn't work. Secure for buyers and sellers.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3 class="feature-title">Crypto Payments</h3>
+                    <p class="feature-description">
+                        Bitcoin, Ethereum, Litecoin, Monero. Fast deposits, automatic processing, anonymous transactions. Min: $20.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">Global Coverage</h3>
+                    <p class="feature-description">
+                        Servers from 15+ countries: USA, Canada, Germany, UK, France, Netherlands, and more. Multiple OS options available.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Advanced Analytics</h3>
+                    <p class="feature-description">
+                        Real-time sales statistics, reputation system, GEO-location data, fraud score integration for quality control.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="container">
+        <div class="stats">
+            <h2 class="section-title">Platform <span class="gradient-text">Statistics</span></h2>
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-value">280+</div>
+                    <div class="stat-label">Servers Available</div>
+                </div>
+                <div>
+                    <div class="stat-value">50+</div>
+                    <div class="stat-label">Active Users</div>
+                </div>
+                <div>
+                    <div class="stat-value">15+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+                <div>
+                    <div class="stat-value">4.9</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+                <div>
+                    <div class="stat-value">5-30s</div>
+                    <div class="stat-label">Delivery Time</div>
+                </div>
+                <div>
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="container" style="margin-bottom: 5rem;">
+        <h2 class="section-title">How It <span class="gradient-text">Works</span></h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fbbf24, #f97316); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: #000;">1</div>
+                <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">Download Tor</h3>
+                <p style="color: #94a3b8; font-size: 0.875rem;">Get Tor Browser from torproject.org</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fbbf24, #f97316); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: #000;">2</div>
+                <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">Visit .onion</h3>
+                <p style="color: #94a3b8; font-size: 0.875rem;">Access our hidden service</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fbbf24, #f97316); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: #000;">3</div>
+                <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">Register</h3>
+                <p style="color: #94a3b8; font-size: 0.875rem;">No email required, anonymous</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fbbf24, #f97316); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 2rem; font-weight: 900; color: #000;">4</div>
+                <h3 style="color: #fbbf24; margin-bottom: 0.5rem;">Start Trading</h3>
+                <p style="color: #94a3b8; font-size: 0.875rem;">Buy or sell servers instantly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://freemarket.bz" class="footer-link">🌐 Website</a>
+                <a href="https://t.me/freemarketbz" class="footer-link" target="_blank">📢 Telegram</a>
+                <a href="https://github.com/freemarket-bz" class="footer-link" target="_blank">💻 GitHub</a>
+            </div>
+            <p style="color: #64748b; font-size: 0.875rem;">
+                🔐 Secure • 🎭 Anonymous • ⚡ Automated
+            </p>
+            <p style="color: #475569; font-size: 0.75rem; margin-top: 1rem;">
+                © 2025 FreeMarket | Tor Hidden Service | Cryptocurrency Only<br>
+                For research and educational purposes only
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
