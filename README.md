@@ -171,7 +171,7 @@ Minimum withdrawal: **$10**
 
 ## 💬 Support & Community
 
-- 📢 **Telegram Channel**: [@freemarketbz](https://t.me/freemarketbz)
+- 📢 **Telegram Channel**: [@freemarketbz](https://t.me/FreeMarketOffical)
 - 💬 **Tox Support**: Available on website
 - 🌐 **Website**: [freemarket.bz](https://freemarket.bz)
 
@@ -219,5 +219,6 @@ This is a commercial platform. All rights reserved.
 *Built with privacy in mind*
 
 </div>
+
 
 
