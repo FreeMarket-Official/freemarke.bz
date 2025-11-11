@@ -171,9 +171,9 @@ Minimum withdrawal: **$10**
 
 ## 💬 Support & Community
 
-- 📢 **Telegram Channel**: [@freemarketbz](https://t.me/FreeMarketOffical)
+- 📢 **Telegram Channel**: [@FreeMarketOffical](https://t.me/FreeMarketOffical)
 - 💬 **Tox Support**: Available on website
-- 🌐 **Website**: [freemarket.bz](https://freemarket.bz)
+- 🌐 **Website**: [freemarket.biz](https://freemarket.bz)
 
 ---
 
@@ -207,7 +207,7 @@ This is a commercial platform. All rights reserved.
 ## 🔗 Links
 
 - 🌐 **Info Page**: [freemarket.bz](https://freemarket.bz)
-- 📢 **Telegram**: [@freemarketbz](https://t.me/FreeMarketOffical)
+- 📢 **Telegram**: [@FreeMarketOffical](https://t.me/FreeMarketOffical)
 - 🧅 **Tor Access**: See website for .onion address
 
 ---
@@ -219,6 +219,7 @@ This is a commercial platform. All rights reserved.
 *Built with privacy in mind*
 
 </div>
+
 
 
 
